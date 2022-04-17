@@ -1,0 +1,20 @@
+$dark: #000;
+$light: #fff;
+$lightBg: #fbfbfd;
+$darkBg: #121212;
+$stColor: #00695c;
+$ndColor: #ffc125;
+$myFont: "Darker Grotesque", sans-serif;
+
+$transition: 0.25s linear;
+$border: 2px solid
+  rgba(
+    $color: $dark,
+    $alpha: 0.5,
+  );
+$borderRadius: 0.25em;
+$boxShadow: 0 0 0.5em 0
+  rgba(
+    $color: $dark,
+    $alpha: 0.35,
+  );

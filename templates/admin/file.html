@@ -1,0 +1,26 @@
+<tr class="model-{{ model.object_name|lower }}">
+                                        {% if model.admin_url %}
+                                            {% if model.name == 'Abouts' %}
+
+                                                <td >
+                                                    <i class="far fa-address-book fa-xt fa-3x "
+                                                       style="margin-right: 5px ">
+                                                    </i>
+
+                                                    <a href="{{ model.admin_url }}">{{ model.name }}</a>
+
+                                                </td>
+
+                                                <td style="">
+                                                    <a href="{{ model.add_url }}" class="btn btn-success btn-xs"><i
+                                                            class="fa fa-plus"></i>
+                                                        {% trans 'Add' %}</a>
+                                                </td>
+
+                                                <td><a href="{{ model.admin_url }}" class="btn btn-warning btn-xs"><i
+                                                        class="fa fa-pencil"></i>
+                                                    {% trans 'Change' %}</a>
+                                                </td>
+                                            {% endif %}
+                                        {% endif %}
+                                    </tr>

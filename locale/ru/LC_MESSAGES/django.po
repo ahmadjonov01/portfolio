@@ -1,0 +1,430 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-19 14:52+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\Appp\models.py:21
+msgid "Link"
+msgstr "Ссылка"
+
+#: .\Appp\models.py:70 .\Appp\models.py:79 .\Appp\models.py:91
+msgid "Title"
+msgstr "Заголовок"
+
+#: .\Appp\models.py:72
+msgid "Natijasi"
+msgstr "Полученные результаты"
+
+#: .\Appp\models.py:73
+msgid "Icon belgisi"
+msgstr "Значок"
+
+#: .\Appp\models.py:74 .\Appp\models.py:94
+msgid "Vaqti"
+msgstr "Время"
+
+#: .\Appp\models.py:81
+msgid "Havolasi"
+msgstr "Ссылка"
+
+#: .\Appp\models.py:82
+msgid "Yuklanga vaqti"
+msgstr "Время загрузки"
+
+#: .\Appp\models.py:83
+msgid "Icon class"
+msgstr "Класс значка"
+
+#: .\Appp\models.py:92
+msgid "Text"
+msgstr "Текст"
+
+#: .\Appp\models.py:95
+msgid "Image"
+msgstr "Изображение"
+
+#: .\templates\about.html:31
+msgid "Boshqa yangiliklar"
+msgstr "Другие новости"
+
+#: .\templates\aboutsingel.html:31
+msgid "Boshqa malumotlar"
+msgstr "Дополнительная информация"
+
+#: .\templates\admin\app_index.html:14 .\templates\admin\base.html:32
+#: .\templates\admin\change_form.html:26 .\templates\admin\change_list.html:39
+#: .\templates\admin\index.html:23 .\templates\admin\object_history.html:13
+msgid "Home"
+msgstr ""
+
+#: .\templates\admin\base_login.html:23 .\templates\admin\base_site.html:6
+msgid "Django administration"
+msgstr ""
+
+#: .\templates\admin\base_site.html:3
+msgid "Django site admin"
+msgstr ""
+
+#: .\templates\admin\change_form.html:35
+#, python-format
+msgid ""
+"Add\n"
+"                %(name)s"
+msgstr ""
+
+#: .\templates\admin\change_form.html:52
+msgid "History"
+msgstr ""
+
+#: .\templates\admin\change_form.html:54
+msgid "View on site"
+msgstr ""
+
+#: .\templates\admin\change_form.html:70 .\templates\admin\change_list.html:54
+#: .\templates\admin\login.html:7 .\templates\adminlte\login.html:19
+msgid "Please correct the error below."
+msgstr ""
+
+#: .\templates\admin\change_form.html:70 .\templates\admin\change_list.html:55
+#: .\templates\admin\login.html:8 .\templates\adminlte\login.html:20
+msgid "Please correct the errors below."
+msgstr ""
+
+#: .\templates\admin\change_list.html:71 .\templates\admin\change_list.html:97
+msgid "Filter"
+msgstr ""
+
+#: .\templates\admin\change_list.html:82
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: .\templates\admin\file.html:17 .\templates\admin\index.html:122
+msgid "Add"
+msgstr ""
+
+#: .\templates\admin\file.html:22 .\templates\admin\index.html:127
+msgid "Change"
+msgstr ""
+
+#: .\templates\admin\index.html:43 .\templates\admin\index.html:162
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr ""
+
+#: .\templates\admin\index.html:149
+msgid "You don't have permission to edit anything."
+msgstr ""
+
+#: .\templates\admin\index.html:159
+msgid "Recent actions"
+msgstr ""
+
+#: .\templates\admin\index.html:160
+msgid "My actions"
+msgstr ""
+
+#: .\templates\admin\index.html:178
+msgid "None available"
+msgstr ""
+
+#: .\templates\admin\index.html:204
+msgid "Unknown content"
+msgstr ""
+
+#: .\templates\admin\lib\_main_header.html:39
+msgid "Change Password"
+msgstr ""
+
+#: .\templates\admin\lib\_main_header.html:40
+msgid "Sign Out"
+msgstr ""
+
+#: .\templates\admin\login.html:37
+msgid "Forgotten your password or username?"
+msgstr ""
+
+#: .\templates\admin\login.html:44
+msgid "Log In"
+msgstr ""
+
+#: .\templates\admin\login.html:53
+#, python-format
+msgid ""
+"You are authenticated as %(username)s, but are not authorized to access this "
+"page. Would you like to login to a different account?"
+msgstr ""
+
+#: .\templates\admin\object_history.html:33
+msgid "Date/time"
+msgstr ""
+
+#: .\templates\admin\object_history.html:34
+msgid "User"
+msgstr ""
+
+#: .\templates\admin\object_history.html:35
+msgid "Action"
+msgstr ""
+
+#: .\templates\admin\object_history.html:49
+msgid ""
+"This object doesn't have a change history. It probably wasn't added via this "
+"admin site."
+msgstr ""
+
+#: .\templates\admin\search_form.html:16
+#, python-format
+msgid ""
+"%(counter)s\n"
+"        result"
+msgid_plural "%(counter)s results"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: .\templates\admin\search_form.html:18
+#, python-format
+msgid ""
+"%(full_result_count)s\n"
+"            total"
+msgstr ""
+
+#: .\templates\admin\search_form.html:19
+msgid "Show all"
+msgstr ""
+
+#: .\templates\adminlte\lib\_main_header.html:142
+msgid "Member since"
+msgstr ""
+
+#: .\templates\adminlte\lib\_main_header.html:150
+msgid "Change password"
+msgstr ""
+
+#: .\templates\adminlte\lib\_main_header.html:151
+msgid "Sign out"
+msgstr ""
+
+#: .\templates\adminlte\login.html:40
+msgid "Username"
+msgstr ""
+
+#: .\templates\adminlte\login.html:44
+msgid "Password"
+msgstr ""
+
+#: .\templates\adminlte\login.html:53
+msgid "Login"
+msgstr ""
+
+#: .\templates\allNews.html:7 .\templates\base.html:283
+#: .\templates\base.html:445 .\templates\base2.html:283
+#: .\templates\base2.html:498 .\templates\index.html:60
+msgid "Yangiliklar"
+msgstr "Новости"
+
+#: .\templates\allPhotos.html:7 .\templates\index.html:154
+msgid "Image Gallery"
+msgstr "Галерея"
+
+#: .\templates\base.html:23 .\templates\base2.html:23
+msgid "O'zbekiston Respublikasi Davlat"
+msgstr "Государство Республики Узбекистан"
+
+#: .\templates\base.html:51 .\templates\base2.html:51
+msgid "Shrift hajmi"
+msgstr "Размер шрифта"
+
+#: .\templates\base.html:66 .\templates\base2.html:66
+msgid "Oddiy Ko'rinish"
+msgstr "Простой внешний вид"
+
+#: .\templates\base.html:85 .\templates\base2.html:85
+msgid "O'zbekiston Respublikasi davlat gerbi"
+msgstr "Государственный герб Республики Узбекистан"
+
+#: .\templates\base.html:86 .\templates\base2.html:86
+msgid ""
+"Davlat gerbi O‘zbekiston Respublikasining 1992 yil 2 iyuldagi 616­ XII ­sonli "
+"«O‘zbekiston Respublikasi Davlat gerbi to‘g‘risida»gi Qonuni bilan "
+"tasdiqlangan."
+msgstr ""
+"Государственный Герб Республики Узбекистан № 616 XII от 2 июля 1992 "
+"годаЗаконом Республики Узбекистан« О Государственном гербе одобренный."
+
+#: .\templates\base.html:102 .\templates\base2.html:102
+msgid "Davlat bayrogʻ"
+msgstr "Государственный флаг"
+
+#: .\templates\base.html:109 .\templates\base2.html:109
+msgid "Oʻzbekiston Respublikasi Davlat bayrogʻi"
+msgstr "Государственный флаг Республики Узбекистан"
+
+#: .\templates\base.html:110 .\templates\base2.html:110
+msgid ""
+"“Oʻzbekiston Respublikasi Davlat bayrogʻi toʻgʻrisida”gi qonun 1991 yil 18 "
+"noyabrda Oʻzbekiston Respublikasi Oliy Kengashining navbatdan tashqari "
+"oʻtkazilgan VII sessiyasida qabul qilingan."
+msgstr ""
+"Закон О Государственном флаге Республики Узбекистан 1991 г. 18Внеочередное "
+"заседание Верховного Совета Республики Узбекистан в ноябреПринято на VII "
+"сессии."
+
+#: .\templates\base.html:111 .\templates\base2.html:111
+msgid ""
+"Davlat bayrogʻi va uning ramzi bugungi Oʻzbekiston sarhadida qadimda mavjud "
+"boʻlgan davlatlar bilan tarixan bogʻliqligini anglatadi hamda "
+"respublikaning  milliy-madaniy anʼanalarini oʻzida mujassamlashtiradi. "
+msgstr ""
+"Государственный флаг и его символ - древние на границе современного "
+"Узбекистанаозначает исторически связанные с существующими государствами "
+"исочетает в себе национальные и культурные традиции республики"
+
+#: .\templates\base.html:134 .\templates\base2.html:134
+msgid "Bayroq"
+msgstr "Флаг"
+
+#: .\templates\base.html:138 .\templates\base2.html:138
+msgid "Gerb"
+msgstr "Герб"
+
+#: .\templates\base.html:142 .\templates\base2.html:142
+msgid "Madhiya"
+msgstr "Гимн"
+
+#: .\templates\base.html:147 .\templates\base2.html:147
+msgid " Ko'zi ojizlar uchun"
+msgstr "Для слепых"
+
+#: .\templates\base.html:179 .\templates\base2.html:179
+msgid "O'zbekiston Respublikasi Qanaqadur Davlat Tashkiloti"
+msgstr "Некоторая государственная организация Республики Узбекистан"
+
+#: .\templates\base.html:284 .\templates\base.html:442
+#: .\templates\base2.html:284 .\templates\base2.html:495
+msgid "Biz Haqimizda"
+msgstr "О нас"
+
+#: .\templates\base.html:285 .\templates\base.html:462
+#: .\templates\base2.html:285 .\templates\base2.html:515
+msgid "Biz Bilan Aloqa"
+msgstr "Связаться с нами"
+
+#: .\templates\base.html:286 .\templates\base2.html:286
+msgid "Media"
+msgstr "СМИ"
+
+#: .\templates\base.html:328 .\templates\base2.html:328
+msgid "Foydali Havolalar"
+msgstr "Полезные ссылки"
+
+#: .\templates\base.html:406 .\templates\base2.html:459
+msgid "So'ngi xabarlardan xabardor bo'lish uchun E-mailingizni kiriting"
+msgstr ""
+"Введите свой адрес электронной почты, чтобы быть в курсе последних новостей"
+
+#: .\templates\base.html:422 .\templates\base2.html:475
+msgid "Obuna bo'lish"
+msgstr "Подписывайся"
+
+#: .\templates\base.html:439 .\templates\base2.html:492
+msgid "Menyu"
+msgstr "Меню"
+
+#: .\templates\base.html:441 .\templates\base2.html:494
+msgid "Bosh Sahifa"
+msgstr "Дом"
+
+#: .\templates\base.html:443 .\templates\base2.html:496
+msgid "Raxbariyat"
+msgstr "Лидерство"
+
+#: .\templates\base.html:444 .\templates\base2.html:497
+msgid "Tuzilma"
+msgstr "Состав"
+
+#: .\templates\base.html:459 .\templates\base2.html:512
+#, fuzzy
+#| msgid "Link"
+msgid "Linklar"
+msgstr "Ссылка"
+
+#: .\templates\base.html:461 .\templates\base2.html:514
+msgid "Vazirlik Haqida"
+msgstr ""
+
+#: .\templates\base.html:463 .\templates\base2.html:516
+msgid "Xujjatlar"
+msgstr ""
+
+#: .\templates\base.html:464 .\templates\base2.html:517
+msgid "Murojaatlar"
+msgstr ""
+
+#: .\templates\base.html:480 .\templates\base2.html:533
+msgid " Biz Ijtimoiy tarmoqlarda"
+msgstr ""
+
+#: .\templates\base2.html:43
+msgid "Qidirish"
+msgstr "Поиск"
+
+#: .\templates\base2.html:223 .\templates\base2.html:226
+#: .\templates\base2.html:229 .\templates\base2.html:260
+#: .\templates\base2.html:273 .\templates\base2.html:291
+#: .\templates\base2.html:294 .\templates\base2.html:297
+msgid "Has Child"
+msgstr ""
+
+#: .\templates\base2.html:288
+msgid "Dropdown Righ"
+msgstr ""
+
+#: .\templates\base2.html:299 .\templates\base2.html:300
+#: .\templates\base2.html:301 .\templates\base2.html:304
+#: .\templates\base2.html:305 .\templates\base2.html:306
+#: .\templates\base2.html:309 .\templates\base2.html:310
+#: .\templates\base2.html:311 .\templates\base2.html:312
+#: .\templates\base2.html:315 .\templates\base2.html:316
+#: .\templates\base2.html:317 .\templates\base2.html:318
+msgid "Item"
+msgstr ""
+
+#: .\templates\index.html:25 .\templates\index.html:81
+msgid "Batafsil"
+msgstr "Более"
+
+#: .\templates\index.html:168
+msgid "See All"
+msgstr "Увидеть все"
+
+#: .\templates\index.html:172
+msgid "Ko'rsatgichlar"
+msgstr "Индикаторы"
+
+#~ msgid "Tashkilot haqida malumotlar"
+#~ msgstr "Информация об организации"
+
+#~ msgid ""
+#~ " Tashkilotning asosiy malumotlar shu joyga yoziladi va bu joy "
+#~ "o`zgarmaydi  "
+#~ msgstr "Здесь написаны основные данные организации и это место не меняется"

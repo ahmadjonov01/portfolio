@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+<div class="photogallery_section section paddingX py-5">
+    <div class="container-fluid">
+        <span class="title wow">{% trans 'Image Gallery' %}</span>
+        <div class="photogallery">
+            <div class="wrapper" id="gallery-container">
+                <figure class="photogallery__item">
+                    <a data-fancybox="images"
+                            href="https://source.unsplash.com/random/7"
+                            data-width="1536"
+                            data-height="2304"
+                    >
+                        <img
+                                class="img-fluid"
+                                src="https://source.unsplash.com/random/7"
+                        />
+                        <i class="fa fa-camera"></i>
+                    </a>
+                </figure>
+                <figure class="photogallery__item">
+                    <a
+                            data-fancybox="images"
+                            href="https://source.unsplash.com/random/8"
+                            data-width="1536"
+                            data-height="2304"
+                    >
+                        <img
+                                class="img-fluid"
+                                src="https://source.unsplash.com/random/8"
+                        />
+                        <i class="fa fa-camera"></i>
+                    </a>
+                </figure>
+                <figure class="photogallery__item">
+                    <a
+                            data-fancybox="images"
+                            href="https://source.unsplash.com/random/9"
+                            data-width="1536"
+                            data-height="2304"
+                    >
+                        <img
+                                class="img-fluid"
+                                src="https://source.unsplash.com/random/9"
+                        />
+                        <i class="fa fa-camera"></i>
+                    </a>
+                </figure>
+                <figure class="photogallery__item">
+                    <a
+                            data-fancybox="images"
+                            href="https://source.unsplash.com/random/10"
+                            data-width="1536"
+                            data-height="2304"
+                    >
+                        <img
+                                class="img-fluid"
+                                src="https://source.unsplash.com/random/10"
+                        />
+                        <i class="fa fa-camera"></i>
+                    </a>
+                </figure>
+                <figure class="photogallery__item">
+                    <a
+                            data-fancybox="images"
+                            href="https://source.unsplash.com/random/11"
+                            data-width="1536"
+                            data-height="2304"
+                    >
+                        <img
+                                class="img-fluid"
+                                src="https://source.unsplash.com/random/11"
+                        />
+                        <i class="fa fa-camera"></i>
+                    </a>
+                </figure>
+                <figure class="photogallery__item">
+                    <a
+                            data-fancybox="images"
+                            href="https://source.unsplash.com/random/12"
+                            data-width="1536"
+                            data-height="2304"
+                    >
+                        <img
+                                class="img-fluid"
+                                src="https://source.unsplash.com/random/12"
+                        />
+                        <i class="fa fa-camera"></i>
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <nav
+                aria-label=""
+                class="d-flex justify-content-center align-items-center"
+        >
+            <ul class="pagination">
+                <li class="page-item disabled">
+              <span class="page-link"
+              ><i class="fas fa-arrow-circle-left"></i
+              ></span>
+                </li>
+                <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item">
+              <span class="page-link">
+                2
+                <span class="sr-only">(current)</span>
+              </span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#"
+                    ><i class="fas fa-arrow-circle-right"></i
+                    ></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+{% endblock %}

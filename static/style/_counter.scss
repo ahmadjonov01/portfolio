@@ -1,0 +1,32 @@
+.counter_section {
+  .counter_wrapper {
+    display: flex;
+    .item_counter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2em;
+      border-radius: $borderRadius;
+      margin-bottom: 1em;
+      box-shadow: $boxShadow;
+      background: $lightBg;
+      i {
+        font-size: 4em;
+        margin-bottom: 0.15em;
+      }
+      .counter_title {
+        font-size: 1.2em;
+        line-height: 1.2;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 1em;
+      }
+      .counter {
+        font-size: 1.75em;
+        font-weight: 600;
+        color: $stColor;
+      }
+    }
+  }
+}

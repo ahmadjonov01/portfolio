@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+    <div class="wrapper header_slider loading">
+        <main>
+            <div class="slideshow">
+
+                <div class="slides">
+
+                    {% for datum in data %}
+
+
+                        <div class="slide slide--current">
+                            <div
+                                    class="slide__img"
+                                    style="
+                                            background-image: url({{ datum.image.url }});
+                                            "
+                            ></div>
+                            <h2 class="slide__title">{{ datum.title }}</h2>
+                            <p class="slide__desc">
+                                {{ datum.text }}
+                            </p>
+                            <a class="slide__link" href="{{ datum.link }}">{% trans 'Batafsil' %}</a>
+                        </div>
+                    {% endfor %}
+                </div>
+                <nav class="slidenav">
+                    <button class="slidenav__item slidenav__item--prev">
+                        <i class="fas fa-angle-left"></i>
+                    </button>
+                    <button class="slidenav__item slidenav__item--next">
+                        <i class="fas fa-angle-right"></i>
+                    </button>
+                </nav>
+            </div>
+        </main>
+    </div>
+    <div class="news paddingX py-5">
+        <div class="container-fluid">
+            <span class="title wow">{% trans 'Yangiliklar' %}</span>
+            <div class="news_block swiper-container">
+                <div class="swiper-wrapper">
+                    {% for datum in dataNews %}
+
+
+                        <div class="news_item swiper-slide">
+                            <div class="date_news">
+                                <i class="far fa-calendar-alt"></i>
+                                <span class="date">{{ datum.time }}</span>
+                            </div>
+                            <div class="news_img">
+                                <img src="{{ datum.image.url }}"/>
+                            </div>
+                            <span class="news_title"
+                            >{{ datum.title }}</span
+                            >
+                            <span class="news_description"
+                            >{{ datum.sub_title|truncatechars:150 }}</span
+                            >
+                            <a href="{% url 'newsall' datum.id %}" class="nd_btn"
+                            ><span>{% trans 'Batafsil' %}</span></a
+                            >
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <a href="{% url 'news' %}" class="st_btn">
+            <span>See All</span>
+        </a>
+    </div>
+    <div class="photogallery paddingX">
+        <span class="title wow">{% trans 'Image Gallery' %}</span>
+        <div class="wrapper" id="gallery-container">
+                {% for foto in  photo|slice:":6"  %}
+                    <figure class="photogallery__item">
+                        <a data-fancybox="images" href="{{ foto.image.url }}" data-width="1536"
+                           data-height="2304">
+                            <img class="img-fluid" src="{{ foto.image.url }}"/>
+                            <i class="fa fa-camera"></i>
+                        </a>
+                    </figure>
+                {% endfor %}
+
+        </div>
+        <a href="{% url 'gallery' %}" class="st_btn">
+            <span>{% trans 'See All' %}</span>
+        </a>
+    </div>
+    <div class="counter_section paddingX py-5">
+        <span class="title wow">{% trans "Ko'rsatgichlar" %}</span>
+        <div class="counter_wrapper row">
+            {% for datum in dataK %}
+                <div class="col-xl-3 col-lg-6 col-md-12 m-0">
+                    <div class="wow item_counter">
+                        <i class="{{ datum.icon }}"></i>
+                        <span class="counter_title">{{ datum.title }}</span>
+                        <span class="counter">{{ datum.reytingnatijasi }}</span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div class="photogallery_section section paddingX py-5">
+        <div class="container-fluid">
+            <span class="title wow">Image Gallery</span>
+            <div class="photogallery">
+
+                <div class="wrapper" id="gallery-container">
+                    {% for datum in page_obj %}
+
+
+                        <figure class="photogallery__item">
+                            <a
+                                    data-fancybox="images"
+                                    href="{{ datum.image.url }}"
+                                    data-width="1536"
+                                    data-height="2304"
+                            >
+                                <img
+                                        class="img-fluid"
+                                        src="{{ datum.image.url }}"
+                                />
+                                <i class="fa fa-camera"></i>
+                            </a>
+                        </figure>
+                    {% endfor %}
+
+                </div>
+            </div>
+{##}
+{#            {% if page_obj.has_previous %}#}
+{#                <a href="?page=1">&laquo; first</a>#}
+{#                <a href="?page={{ page_obj.previous_page_number }}">previous</a>#}
+{#            {% endif %}#}
+{#            <span class="current">#}
+{#            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.#}
+{#        </span>#}
+{#            <br>#}
+{#            {% if page_obj.has_next %}#}
+{#                <a href="?page={{ page_obj.next_page_number }}">next</a>#}
+{#                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>#}
+{#            {% endif %}#}
+            <nav
+                    aria-label=""class="d-flex justify-content-center align-items-center">
+
+                <ul class="pagination d-flex justify-content-center">
+                    {% if page_obj.has_previous %}
+
+                        <li class="page-item disabled">
+                            <a href="?page={{ page_obj.previous_page_number }}"><span class="page-link"><i
+                                    class="fas fa-arrow-circle-left"></i></span></a>
+                        </li>
+                    {% endif %}
+                        <li class="page-item active">
+                            <a class="page-link" href="#">{{ page_obj.number }}
+                            </a>
+                        </li>
+                    {% if page_obj.has_next %}
+
+                        <li class="page-item"><a class="page-link"
+                                                 href="?page={{ page_obj.next_page_number }}"> {{ page_obj.paginator.num_pages }}</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}"
+                            ><i class="fas fa-arrow-circle-right"></i></a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+{% endblock %}

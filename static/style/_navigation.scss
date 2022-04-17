@@ -1,0 +1,145 @@
+body {
+  font-family: "josefin sans", "helvetica", sans-serif;
+}
+header {
+  .header_top {
+    background: $stColor;
+    .links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      .link {
+        margin: 0 0.5em;
+        img {
+          width: 1.5em;
+          height: 1.5em;
+          border: 1px solid $light;
+          border-radius: 50%;
+        }
+        span {
+          color: $light;
+          font-size: 0.75em;
+          font-weight: normal;
+        }
+        i {
+          font-size: 1.5em;
+          color: $light;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          span {
+            font-size: 0.5em;
+            font-weight: normal;
+          }
+        }
+        .search {
+          display: block;
+          width: 1.5em;
+          height: 1.5em;
+          border: 1px solid $light;
+          border-radius: 50%;
+          margin: 0.25em;
+          position: relative;
+          cursor: pointer;
+          transition: $transition;
+          &:hover {
+            transform: scale(1.1);
+          }
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: -5px;
+            width: 0.5em;
+            height: 1px;
+            transform: rotate(40deg);
+            background: $light;
+          }
+        }
+      }
+    }
+    .langs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      .lang {
+        color: $light;
+        margin: 0 0.5em;
+        img {
+          width: 1.2em;
+          height: 1.2em;
+          border-radius: 50%;
+        }
+        span {
+          font-weight: normal;
+          font-size: 0.75em;
+        }
+      }
+    }
+  }
+  .header_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo {
+      display: flex;
+      flex-direction: row;
+      // justify-content: center;
+      align-items: center;
+      i {
+        font-size: 4em;
+        margin-right: 0.25em;
+        color: $stColor;
+      }
+      span {
+        font-size: 1em;
+        color: $stColor;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+    .info_block {
+      .info_item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 0.25em;
+        i {
+          font-size: 1.2em;
+          margin: 0.5em;
+        }
+        .wrap_item {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          span {
+            font-size: 0.8em;
+          }
+          a {
+            color: $dark;
+            font-size: 0.8em;
+          }
+        }
+      }
+      .social {
+        a {
+          color: $dark;
+          i {
+            font-size: 1.2em;
+          }
+          &:hover {
+            color: $stColor;
+          }
+        }
+      }
+    }
+  }
+}
+.stellarnav {
+  position: relative;
+  z-index: 1;
+}

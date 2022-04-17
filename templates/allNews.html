@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+
+    <div class="news_section section paddingX py-5">
+        <div class="container-fluid">
+            <span class="title wow">{% trans 'Yangiliklar' %}</span>
+            <div class="wrapper row">
+                {% for datum in page_obj %}
+                    <div class="col-md-6 col-12 col-xl-4 mb-4">
+                        <div class="news_item">
+                            <div class="news_item swiper-slide">
+                                <div class="date_news">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span class="date">{{ datum.time }}</span>
+                                </div>
+                                <div class="news_img">
+                                    <img src="{{ datum.image.url }}"/>
+                                </div>
+                                <span class="news_title"
+                                >{{ datum.title }}</span
+                                >
+                                <span class="news_description"
+                                >{{ datum.sub_title }}</span
+                                >
+                                <a
+                                        href="{% url 'newsall' datum.id %}" class="nd_btn"
+                                ><span>Read More</span></a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{#    {% if page_obj.has_previous %}#}
+{#        <a href="?page=1">&laquo; first</a>#}
+{#        <a href="?page={{ page_obj.previous_page_number }}">previous</a>#}
+{#    {% endif %}#}
+{#    <span class="current">#}
+{#            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.#}
+{#        </span>#}
+{##}
+{#    {% if page_obj.has_next %}#}
+{#        <a href="?page={{ page_obj.next_page_number }}">next</a>#}
+{#        <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>#}
+{#    {% endif %}#}
+    <nav
+            aria-label="" class="d-flex justify-content-center align-items-center">
+
+        <ul class="pagination d-flex justify-content-center">
+            {% if page_obj.has_previous %}
+
+                <li class="page-item disabled">
+                    <a href="?page={{ page_obj.previous_page_number }}"><span class="page-link"><i
+                            class="fas fa-arrow-circle-left"></i></span></a>
+                </li>
+            {% endif %}
+            <li class="page-item active">
+                <a class="page-link" href="#">{{ page_obj.number }}
+                </a>
+            </li>
+            {% if page_obj.has_next %}
+
+                <li class="page-item"><a class="page-link"
+                                         href="?page={{ page_obj.next_page_number }}"> {{ page_obj.paginator.num_pages }}</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}"
+                    ><i class="fas fa-arrow-circle-right"></i></a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% comment %} <div class="wow services paddingX py-5">
+        <span class="title wow">Foydali Havolalar</span>
+        <div class="container-fluid">
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <i class="far fa-user"></i>
+                        <a href="#" class="service_title"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing elit.</a
+                        >
+                    </div>
+                    <div class="swiper-slide">
+                        <i class="fas fa-american-sign-language-interpreting"></i>
+                        <a href="#" class="service_title"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing elit.</a
+                        >
+                    </div>
+                    <div class="swiper-slide">
+                        <i class="fas fa-user-friends"></i>
+                        <a href="#" class="service_title"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing elit.</a
+                        >
+                    </div>
+                    <div class="swiper-slide">
+                        <i class="fas fa-question"></i>
+                        <a href="#" class="service_title"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing elit.</a
+                        >
+                    </div>
+                    <div class="swiper-slide">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <a href="#" class="service_title"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing elit.</a
+                        >
+                    </div>
+                    <div class="swiper-slide">
+                        <i class="fas fa-user-check"></i>
+                        <a href="#" class="service_title"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing elit.</a
+                        >
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div> {% endcomment %}
+{% endblock %}

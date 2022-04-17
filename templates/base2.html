@@ -1,0 +1,598 @@
+{% load static %}
+{% load i18n %}
+{% load change_lang %}
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="{% static 'css/fa/css/all.min.css' %}"/>
+    {#    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css"/>#}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.3/dist/jquery.fancybox.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/stellarnav.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}"/>
+    <title>{% trans "O'zbekiston Respublikasi Davlat" %}</title>
+</head>
+
+<body>
+{#<div class="preloader">#}
+{#    <img src="{% static 'img/gif/loading.gif' %}"/>#}
+{#</div>#}
+
+<span class="anim01"></span>
+<span class="anim02"></span>
+<span class="anim03"></span>
+<span class="anim04"></span>
+
+<div class="modal_fullscreen"></div>
+<div class="goTop">
+    <i class="far fa-arrow-alt-circle-up"></i>
+</div>
+<div class="search_input">
+    <form>
+        <input type="text" class="form-control"/>
+        <button class="search_btn" type="submit">{% trans "Qidirish" %}</button>
+        <i class="fas fa-times text-dark close_icon"></i>
+    </form>
+</div>
+<div class="accessibility_menu">
+    <div class="container">
+        <div class="accessibility_wrapper">
+            <div class="font_size accessibility_item">
+                <span>{% trans "Shrift hajmi" %}</span>
+                <div class="buttons">
+                    <button class="small_size">A-</button>
+                    <button class="normal_size">A</button>
+                    <button class="high_size">A+</button>
+                </div>
+            </div>
+            <div class="color_system accessibility_item">
+                <span>Tizim rangi</span>
+                <div class="buttons">
+                    <button class="grayscale">A</button>
+                    <button class="invert">A</button>
+                    <button class="contrast">A</button>
+                </div>
+            </div>
+            <button class="reset accessibility_item">{% trans "Oddiy Ko'rinish" %}</button>
+            <i class="fas fa-times text-dark close_icon"></i>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+     style="z-index: 99999">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card" style="">
+                    <div class="card-body">
+                        <img src="{% static 'gerb.png' %}" alt="gerb" class="card-img-top ">
+                        <h5 class="card-title">{% trans "O'zbekiston Respublikasi davlat gerbi" %}</h5>
+                        <p class="card-text"> {% trans "Davlat gerbi O‘zbekiston Respublikasining 1992 yil 2 iyuldagi 616­ XII ­sonli «O‘zbekiston Respublikasi Davlat gerbi to‘g‘risida»gi Qonuni bilan tasdiqlangan." %}</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal2 -->
+<div class="modal fade" id="exampleModaluzbf" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+     style="z-index: 99999">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{% trans "Davlat bayrogʻ" %}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card" style="">
+                    <div class="card-body">
+                        <img src="{% static 'uzbF.png' %}" alt="gerb" class="card-img-top ">
+                        <h5 class="card-title">{% trans "Oʻzbekiston Respublikasi Davlat bayrogʻi" %}</h5>
+                        <p class="card-text"> {% trans "“Oʻzbekiston Respublikasi Davlat bayrogʻi toʻgʻrisida”gi qonun 1991 yil 18 noyabrda Oʻzbekiston Respublikasi Oliy Kengashining navbatdan tashqari oʻtkazilgan VII sessiyasida qabul qilingan." %}</p>
+                        <p class="card-text">{% trans "Davlat bayrogʻi va uning ramzi bugungi Oʻzbekiston sarhadida qadimda mavjud boʻlgan davlatlar bilan tarixan bogʻliqligini anglatadi hamda respublikaning  milliy-madaniy anʼanalarini oʻzida mujassamlashtiradi. " %} </p>
+                        {#                <p class="card-text">  “Oʻzbekiston Respublikasi Davlat bayrogʻi toʻgʻrisida”gi qonun 1991 yil 18 noyabrda Oʻzbekiston Respublikasi Oliy Kengashining navbatdan tashqari oʻtkazilgan VII sessiyasida qabul qilingan.</p>#}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<header class="section">
+    <div class="header_top paddingX py-1 headline">
+        <div
+                class="
+            container-fluid
+            d-flex
+            justify-content-between
+            align-items-center
+          "
+        >
+            <div class="links">
+                <a href="#" class="wow link d-none d-sm-block">
+                    <img src="{% static 'img/png/uzb.png' %}" data-bs-toggle="modal"
+                         data-bs-target="#exampleModaluzbf"/>
+                    <span>{% trans 'Bayroq' %}</span>
+                </a>
+                <a href="#" class="wow link d-none d-sm-block" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img src="{% static 'img/png/gerb.gif' %}"/>
+                    <span>{% trans 'Gerb' %}</span>
+                </a>
+                <a href="#" class="wow link d-none d-sm-block" id="madhiya">
+                    <img src="{% static 'img/png/madhiya.png' %}"/>
+                    <span>{% trans 'Madhiya' %}</span>
+                </a>
+                <a href="#" class="wow link accessibility">
+                    <i class="fas fa-eye"
+                    ><span class="d-none d-sm-block"
+                    >&nbsp;{% trans " Ko'zi ojizlar uchun" %}</span
+                    ></i
+                    >
+                </a>
+                <a href="#" class="wow link">
+                    <span class="search" title="Qidiruv"></span>
+                </a>
+            </div>
+            <div class="langs">
+
+                <a href="{{ request|change_lang:"uz" }}" class="uzb wow lang">
+                    <img src="{% static 'img/png/uzb.png' %}"/>
+                    <span>Uzb</span>
+                </a>
+                <a href="{{ request|change_lang:"ru" }}" class="rus wow lang">
+                    <img src="{% static 'img/png/rus.png' %}"/>
+                    <span>Рус</span>
+                </a>
+                <a href="{{ request|change_lang:"en" }}" class="eng wow lang">
+                    <img src="{% static 'img/png/eng.png' %}"/>
+                    <span>Eng</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="header_info paddingX py-1 headline">
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-xl-4">
+                    <a href="{% url 'index' %}" class="logo">
+                        <i class="far fa-circle"></i>
+                        <span
+                        >{% trans "O'zbekiston Respublikasi Qanaqadur Davlat Tashkiloti" %}</span
+                        >
+                    </a>
+                </div>
+                <div class="col-xl-8">
+                    <div class="info_block row">
+                        <div class="col-lg-4">
+                            <a href="tel:+998906325914" class="info_item">
+                                <i class="fas fa-phone-alt"></i>
+                                <div class="wrap_item">
+                                    <span class="phone">+998 90 632 59 14</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 d-none d-sm-block">
+                            <div class="info_item">
+                                <i class="fas fa-box"></i>
+                                <div class="wrap_item">
+                                    <a href="mailto:bobakalonov@gmail.com" class="email"
+                                    >bobakalonov@gmail.com</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="info_item social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-telegram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="stellarnav paddingX headline">
+    <ul>
+        <li>
+            <a href="">Dropdown Left</a>
+            <ul>
+                <li>
+                    <a href="#">{% trans 'Has Child' %}</a>
+                    <ul>
+                        <li>
+                            <a href="#">{% trans 'Has Child' %}</a>
+                            <ul>
+                                <li>
+                                    <a href="#">{% trans 'Has Child' %}</a>
+                                    <ul>
+                                        <li><a href="#">Item</a></li>
+                                        <li><a href="#">Item</a></li>
+                                        <li><a href="#">Item</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Item</a>
+                    <ul>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Item</a>
+                    <ul>
+                        <li>
+                            <a href="#">{% trans 'Has Child' %}</a>
+                            <ul>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">{% trans 'Has Child' %}</a>
+                    <ul>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="{% url 'news' %}">{% trans 'Yangiliklar' %}</a></li>
+        <li><a href="{% url 'about' %}">{% trans "Biz Haqimizda" %}</a></li>
+        <li><a href="{% url 'contact' %}">{% trans "Biz Bilan Aloqa" %}</a></li>
+        <li><a href="{% url 'gallery' %}">{% trans "Media" %}</a></li>
+        <li class="drop-left">
+            <a href="">{% trans 'Dropdown Righ' %}t</a>
+            <ul>
+                <li>
+                    <a href="#">{% trans 'Has Child' %}</a>
+                    <ul>
+                        <li>
+                            <a href="#">{% trans 'Has Child' %}</a>
+                            <ul>
+                                <li>
+                                    <a href="#">{% trans 'Has Child' %}</a>
+                                    <ul>
+                                        <li><a href="#">{% trans 'Item' %}</a></li>
+                                        <li><a href="#">{% trans 'Item' %}</a></li>
+                                        <li><a href="#">{% trans 'Item' %}</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">{% trans 'Item' %}</a></li>
+                                <li><a href="#">{% trans 'Item' %}</a></li>
+                                <li><a href="#">{% trans 'Item' %}</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">{% trans 'Item' %}</a></li>
+                        <li><a href="#">{% trans 'Item' %}</a></li>
+                        <li><a href="#">{% trans 'Item' %}</a></li>
+                        <li><a href="#">{% trans 'Item' %}</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">{% trans 'Item' %}</a></li>
+                <li><a href="#">{% trans 'Item' %}</a></li>
+                <li><a href="#">{% trans 'Item' %}</a></li>
+                <li><a href="#">{% trans 'Item' %}</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+{% block content %}
+
+{% endblock %}
+<div class="wow services paddingX py-5">
+    <span class="title wow">{% trans 'Foydali Havolalar' %}</span>
+    <div class="container-fluid">
+        <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+                {% comment %} {% for datum in dataF %}
+                    <div class="swiper-slide">
+                        {% comment %} {{ datasingl.icon }} {% endcomment %}
+                {% comment %} <i class="{{ datum.icon }}"></i>
+                        <a href="{{ datum.link }}" class="service_title">{{ datum.title }}</a>
+                    </div> {% endcomment %}
+                {% for datum in dataF %}
+                    <div class="swiper-slide">
+                        <i class="{{ datum.icon }}"></i>
+                        <a href="{{ datum.link }}" class="service_title"
+                        >{{ datum.title }}</a
+                        >
+                    </div>
+                {% endfor %}
+
+                {% comment %}
+                    <div class="swiper-slide">
+                        <i class="fas fa-user-friends"></i>
+                        <a href="#" class="service_title"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing elit.</a
+                        >
+                    </div>
+                    <div class="swiper-slide">
+                        <i class="fas fa-question"></i>
+                        <a href="#" class="service_title"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing elit.</a
+                        >
+                    </div>
+                    <div class="swiper-slide"> {% endcomment %}
+                {% comment %} <i class="fas fa-exclamation-triangle"></i> {% endcomment %}
+                {% comment %} <a href="#" class="service_title" {% endcomment %}
+                {% comment %} >Lorem ipsum dolor sit amet consectetur adipisicing elit.</a {% endcomment %}
+                {% comment %} > {% endcomment %}
+                {% comment %} </div> {% endcomment %}
+                {% comment %} <div class="swiper-slide"> {% endcomment %}
+                {% comment %} <i class="fas fa-user-check"></i> {% endcomment %}
+                {% comment %} <a href="#" class="service_title" {% endcomment %}
+                {% comment %} >Lorem ipsum dolor sit amet consectetur adipisicing elit.</a {% endcomment %}
+                >
+                {% comment %} </div> {% endcomment %}
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</div>
+<div class="footer py-5">
+    {#    <div class="row mb-3 paddingX">#}
+    {#        <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-3">#}
+    {#            <span class="sub_title">Menu Title</span>#}
+    {#            <ul>#}
+    {#                <li><a href="#">Menu Item 01</a></li>#}
+    {#                <li><a href="#">Menu Item 01</a></li>#}
+    {#                <li><a href="#">Menu Item 01</a></li>#}
+    {#                <li><a href="#">Menu Item 01</a></li>#}
+    {#                <li><a href="#">Menu Item 01</a></li>#}
+    {#            </ul>#}
+    {#        </div>#}
+    {#        <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-3">#}
+    {#            <span class="sub_title">Menu Title</span>#}
+    {#            <ul>#}
+    {#                <li><a href="#">Menu Item 01</a></li>#}
+    {#                <li><a href="#">Menu Item 01</a></li>#}
+    {#                <li><a href="#">Menu Item 01</a></li>#}
+    {#                <li><a href="#">Menu Item 01</a></li>#}
+    {#                <li><a href="#">Menu Item 01</a></li>#}
+    {#            </ul>#}
+    {#        </div>#}
+    {#        <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-3">#}
+    {#            <span class="sub_title">Menu Title</span>#}
+    {#            <ul>#}
+    {#                <li><a href="#">Menu Item 01</a></li>#}
+    {#                <li><a href="#">Menu Item 01</a></li>#}
+    {#                <li><a href="#">Menu Item 01</a></li>#}
+    {#                <li><a href="#">Menu Item 01</a></li>#}
+    {#                <li><a href="#">Menu Item 01</a></li>#}
+    {#            </ul>#}
+    {#        </div>#}
+    {#        <div class="col-12 col-md-6 col-lg-12 col-xl-3 mb-3">#}
+    {#            <span class="sub_title">Menu Title</span>#}
+    {#            <div class="contacts">#}
+    {#                <div class="contacts__item">#}
+    {#                    <i class="fas fa-map-marker-alt"></i>#}
+    {#                    <span class="wrap">#}
+    {#                <span>Lorem ipsum dolor sit amet.</span>#}
+    {#                <span>dolor sit amet.</span>#}
+    {#                <span>ipsum dolor sit amet. 46</span>#}
+    {#              </span>#}
+    {#                </div>#}
+    {#                <a href="tel:+998906325914" class="contacts__item">#}
+    {#                    <i class="fas fa-phone-alt"></i>#}
+    {#                    <span>+998 (90) 632-59-14</span>#}
+    {#                </a>#}
+    {#                <a href="mailto:example@mail.com" class="contacts__item">#}
+    {#                    <i class="fas fa-mail-bulk"></i>#}
+    {#                    <span>example@mail.com</span>#}
+    {#                </a>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </div>#}
+    <footer class="new_footer_area bg_color paddingX py-5">
+        <div class="new_footer_top">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div
+                                class="f_widget company_widget wow fadeInLeft"
+                                data-wow-delay="0.2s"
+                                style="
+                  visibility: visible;
+                  animation-delay: 0.2s;
+                  animation-name: fadeInLeft;
+                "
+                        >
+                            <h3 class="f-title f_600 t_color f_size_18">Obuna</h3>
+                            <p>{% trans "So'ngi xabarlardan xabardor bo'lish uchun E-mailingizni kiriting" %}
+                            </p>
+                            <form
+                                    action="#"
+                                    class="f_subscribe_two mailchimp"
+                                    method="post"
+                                    novalidate="true"
+                                    _lpchecked="1"
+                            >
+                                <input
+                                        type="text"
+                                        name="EMAIL"
+                                        class="form-control memail"
+                                        placeholder="E-mail"
+                                />
+                                <button class="btn btn_get btn_get_two" type="submit">
+                                    {% trans "Obuna bo'lish" %}
+                                </button>
+                                <p class="mchimp-errmessage" style="display: none"></p>
+                                <p class="mchimp-sucmessage" style="display: none"></p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div
+                                class="f_widget about-widget pl_70 wow fadeInLeft"
+                                data-wow-delay="0.4s"
+                                style="
+                  visibility: visible;
+                  animation-delay: 0.4s;
+                  animation-name: fadeInLeft;
+                "
+                        >
+                            <h3 class="f-title f_600 t_color f_size_18">{% trans 'Menyu' %}</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="{% url 'index' %}">{% trans 'Bosh Sahifa' %}</a></li>
+                                <li><a href="{% url "about" %}">{% trans 'Biz Haqimizda' %}</a></li>
+                                <li><a href="#">{% trans 'Raxbariyat' %}</a></li>
+                                <li><a href="#">{% trans 'Tuzilma' %}</a></li>
+                                <li><a href="{% url 'news' %}">{% trans 'Yangiliklar' %}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div
+                                class="f_widget about-widget pl_70 wow fadeInLeft"
+                                data-wow-delay="0.6s"
+                                style="
+                  visibility: visible;
+                  animation-delay: 0.6s;
+                  animation-name: fadeInLeft;
+                "
+                        >
+                            <h3 class="f-title f_600 t_color f_size_18">{% trans 'Linklar' %}</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="c={% url 'about' %}">{% trans 'Vazirlik Haqida' %}</a></li>
+                                <li><a href="{% url 'contact' %}">{% trans 'Biz Bilan Aloqa' %} </a></li>
+                                <li><a href="#">{% trans 'Xujjatlar' %}</a></li>
+                                <li><a href="{% url 'about' %}">{% trans 'Murojaatlar' %}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div
+                                class="f_widget social-widget pl_70 wow fadeInLeft"
+                                data-wow-delay="0.8s"
+                                style="
+                  visibility: visible;
+                  animation-delay: 0.8s;
+                  animation-name: fadeInLeft;
+                "
+                        >
+                            <h3 class="f-title f_600 t_color f_size_18">
+
+                                {% trans ' Biz Ijtimoiy tarmoqlarda' %}              </h3>
+                            <div class="f_social_icon">
+                                <a href="#" class="fab fa-facebook"></a>
+                                <a href="#" class="fab fa-twitter"></a>
+                                <a href="#" class="fab fa-telegram"></a>
+                                <a href="#" class="fab fa-youtube"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-sm-7">
+                        <p class="mb-0 f_400">© iSoft 2021</p>
+                    </div>
+                    <div class="col-lg-6 col-sm-5 text-right">
+                        <p>
+                            Designed <i class="icon_heart"></i> by
+                            <a href="https://t.me/bobakalonov" class="text-dark"
+                            >iSoft Company</a
+                            >
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="map mb-3">
+        <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48628.95034719378!2d71.75544211991246!3d40.37983490223694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb83431937abc5%3A0xcfa4d876b34e7bbc!2z0KTQtdGA0LPQsNC90LAsINCj0LfQsdC10LrQuNGB0YLQsNC9!5e0!3m2!1sru!2s!4v1635587830140!5m2!1sru!2s"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+        ></iframe>
+    </div>
+    <div class="footer__bottom paddingX">
+        <p>Copyright &copy; 2021</p>
+        <p>Designed by <a href="https://t.me/bobakalonov">iSoftware</a></p>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js"></script>
+{#<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js"></script>#}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.2.0/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.3/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+<script src="{% static 'js/waypoints.min.js' %}"></script>
+<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'js/stellarnav.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script>
+    var audio = new Audio("{% static 'madhiya.mp3' %}");
+    var madhiya = document.getElementById('madhiya');
+
+    madhiya.onclick = function () {
+        if (madhiya.classList.contains('play')) {
+            audio.pause();
+            madhiya.classList.remove("play");
+
+        } else {
+            audio.play();
+            madhiya.classList.add("play");
+        }
+    }
+</script>
+</body>
+</html>

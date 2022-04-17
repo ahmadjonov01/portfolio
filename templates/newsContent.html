@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load social_share %}
+{% block content %}
+
+    <div class="news_content py-4">
+        <div class="container">
+            <div class="row">
+
+
+                {% for datum in data %}
+                    <div class="col-lg-7">
+                        <div class="row">
+                            <div class="col-12 py-3">
+                                <img
+                                        class="news_img"
+                                        src="{{ datum.image.url }}"
+                                />
+                            </div>
+                            <div class="col-12">
+                                <span class="date text-muted mb-1">{{ datum.time }}</span>
+                                <h5 class="news_title">
+                                    {{ datum.title }}
+                                </h5>
+                                <p>
+                                    {{ datum.text }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+                <div class="col-lg-5 py-3">
+                    <h5 class="text-dark mb-3">Boshqa yangiliklar</h5>
+                    {% for foo in dataall %}
+
+                        <div class="row mb-3">
+                            <div class="col-4">
+                                <img
+                                        class="news_thumbs"
+                                        src="{{ foo.image.url }}"
+                                />
+                            </div>
+                            <div class="col-8">
+                                <a class="text-dark" href="{% url 'newsall' foo.id %}"
+                                >{{ foo.sub_title|truncatechars:1000 }}</a
+                                >
+                            </div>
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div
+                            class="f_widget social-widget pl_70 wow fadeInLeft"
+                            data-wow-delay="0.8s"
+                            style="
+                visibility: visible;
+                animation-delay: 0.8s;
+                animation-name: fadeInLeft;
+              "
+                    >
+                        <div class="f_social_icon">
+                            <a href=" https://www.facebook.com/sharer.php?u=https://vodiy-asg.uz/news/"
+                               class="fab fa-facebook mr-1"></a>
+                            {#                            <a href="http://www.facebook.com/sharer/sharer.php?u={{ request.get_full_path|urlencode }}" class="fab fa-facebook mr-1"></a>#}
+                            {#                            <a href="http://www.facebook.com/sharer/sharer.php?u={{ request.get_full_path|urlencode }}"></a>#}
+                            <a href="#" class="fab fa-twitter mr-1"></a>
+                            <a href=https://t.me/share/url?url=https://vodiy-asg.uz/news/ "
+                               class="fab fa-telegram mr-1"></a>
+                            <a href="#" class="fab fa-youtube"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
